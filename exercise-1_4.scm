@@ -1,0 +1,6 @@
+(define (square x) (* x x))
+(define (sum_of_squares x y) (+ (square x) (square y)))
+(define (largest_of_three x y z) (cond ((and (> x y) (> y z)) (sum_of_squares x y))
+                                       ((and (> y x) (> x z)) (sum_of_squares y x))
+                                       ((and (> x z) (> z y)) (sum_of_squares x z))
+                                       ((and (> y z) (> z x)) (sum_of_squares y z))))
